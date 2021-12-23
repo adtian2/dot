@@ -27,3 +27,5 @@ export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 
+# ALIAS
+alias ll="ls -la"
