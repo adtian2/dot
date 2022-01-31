@@ -2,6 +2,8 @@
 # Customization
 #
 
+# Molokai Theme: https://github.com/lysyi3m/macos-terminal-themes
+
 # GIT FUNCTIONS
 git_branch() {
     git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -29,3 +31,6 @@ export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 
 # ALIAS
 alias ll="ls -la"
+[ -f "/Users/andrewtian/.ghcup/env" ] && source "/Users/andrewtian/.ghcup/env" # ghcup-env
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"

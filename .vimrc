@@ -1,4 +1,5 @@
 syntax on
+"https://github.com/tomasr/molokai
 colorscheme molokai
 
 set tabstop=4 softtabstop=4
@@ -28,3 +29,14 @@ augroup Trimmer
     autocmd!
     autocmd BufWritePre * :call TrimWhitespace()
 augroup END
+
+"vim-plug
+"curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"
+" run :PlugInstall to install
+call plug#begin('~/.vim/plugged')
+
+Plug 'tmsvg/pear-tree'
+
+call plug#end()
