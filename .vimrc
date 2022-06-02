@@ -18,6 +18,10 @@ let loaded_matchparen = 1
 set modeline
 set showmatch
 
+"tab completion
+set wildmode=longest,list,full
+set wildmenu
+
 "fix slow Typescript syntax
 "https://jameschambers.co.uk/vim-typescript-slow
 set re=0
@@ -28,7 +32,6 @@ fun! TrimWhitespace()
   keeppatterns %s/\s\+$//e
   call winrestview(l:save)
 endfun
-
 
 augroup Trimmer
   autocmd!
