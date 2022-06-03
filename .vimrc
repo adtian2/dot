@@ -39,19 +39,6 @@ augroup END
 call plug#begin('~/.vim/plugged')
 
 Plug 'tmsvg/pear-tree'
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --ts-completer --java-completer' }
 
 call plug#end()
-
-"vundle
-" run :PluginInstall to install
-set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'ycm-core/YouCompleteMe'
-
-call vundle#end()
-filetype plugin indent on
