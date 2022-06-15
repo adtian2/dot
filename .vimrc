@@ -17,6 +17,7 @@ set scrolloff=8
 let loaded_matchparen = 1
 set modeline
 set showmatch
+set splitbelow
 
 "fix slow Typescript syntax
 "https://jameschambers.co.uk/vim-typescript-slow
