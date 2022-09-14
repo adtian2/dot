@@ -1,0 +1,5 @@
+iterm2 colorscheme
+  - https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Monokai%20Remastered.itermcolors
+
+zsh shell prompt
+  - https://dev.to/voracious/a-guide-to-customizing-the-zsh-shell-prompt-2an6
