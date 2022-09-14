@@ -6,3 +6,5 @@ The terminal theme I use is the Molokai theme from here: https://github.com/lysy
 - The vim theme I use is the Molokai theme from here: https://github.com/tomasr/molokai.
 
 - Plugin Manager: https://github.com/junegunn/vim-plug/wiki/tutorial
+- Autocomplete: https://github.com/ycm-core/YouCompleteMe
+  - https://stackoverflow.com/questions/69914503/installing-vim-with-python3-support
