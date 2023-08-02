@@ -1,7 +1,7 @@
-syntax on
 "https://github.com/tomasr/molokai
 colorscheme molokai
 
+syntax on
 set tabstop=2 softtabstop=2
 set shiftwidth=2
 set backspace=2
@@ -19,10 +19,6 @@ set modeline
 set showmatch
 set splitbelow
 
-"fix slow Typescript syntax
-"https://jameschambers.co.uk/vim-typescript-slow
-set re=0
-
 "trims whitespace
 fun! TrimWhitespace()
   let l:save = winsaveview()
@@ -37,9 +33,17 @@ augroup END
 
 "vim-plug
 " run :PlugInstall to install
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'tmsvg/pear-tree'
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --ts-completer --java-completer' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
